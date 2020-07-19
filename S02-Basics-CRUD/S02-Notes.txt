@@ -1,0 +1,25 @@
+
+# show databases
+show dbs
+
+# switch to database flights
+use flights
+
+Store data in Collections
+
+> db.flightData.insertOne({
+...   "departureAirport": "MUC",
+...   "arrivalAirport": "SFO",
+...   "aircraft": "Airbus A380",
+...   "distance": 12000,
+...   "intercontinental": true
+... })
+{
+	"acknowledged" : true,
+	"insertedId" : ObjectId("5f125c2693f0aec5a0ace08e")
+}
+> 
+
+db.flightData.find().pretty()
+
+

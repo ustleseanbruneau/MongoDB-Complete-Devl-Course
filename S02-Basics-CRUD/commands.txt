@@ -1,0 +1,30 @@
+
+# CLI shell only shows first 20 documents in find()
+# Print all documents in a collection
+
+db.passengers.find().forEach((passengerData) => {printjson(passengerData)})
+
+
+# Projection
+
+db.passengers.find({}, {name: 1}).pretty()
+
+# exclude _id - use 0
+db.passengers.find({}, {name: 1, _id: 0}).pretty()
+
+# embedded document
+db.flightData.updateMany({}, {$set: {status: {description: "on-time", lastUpdated: "1 hour ago"}}})
+
+db.passengers.find({hobbies: "sports"}).pretty()
+
+db.passengers.findOne({name: "Albert Twostone"}).hobbies
+
+db.passengers.updateOne({name: "Albert Twostone"}, {$set: {hobbies: ["sports","cooking"]}})
+
+
+db.flightData.find({"status.description": "on-time"}).pretty()
+
+:wq
+
+M
+db.flightData.find({"status.description": "on-time"}).pretty()

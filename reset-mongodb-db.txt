@@ -1,0 +1,8 @@
+
+use databaseName
+db.dropDatabase()
+
+OR
+
+db.myColleciton.drop()
+
