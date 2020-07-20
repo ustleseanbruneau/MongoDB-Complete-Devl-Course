@@ -1,0 +1,26 @@
+
+
+db.companies.insertOne({name: "Fresh Apples Inc", isStartup: true, employees: 33, funding: 12345678901234567890, details: {ceo: "Mark Super"}, tags: [{title: "super"}, {title: "perfect"}], foundingDate: new Date(), insertedAt: new Timestamp()}) 
+
+db.companies.findOne()
+
+
+db.numbers.insertOne({a:1})
+
+db.numbers.findOne()
+
+db.stats()
+
+db.companies.drop()
+
+db.stats()
+
+db.numbers.deleteMany({})
+
+db.numbers.insertOne({a: NumberInt(1)})
+
+db.stats()
+
+typeof db.numbers.findOne().a
+
+
