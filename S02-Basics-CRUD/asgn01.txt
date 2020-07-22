@@ -1,0 +1,20 @@
+
+use hospital
+
+db.patients.insertMany([{firstName: "LeSean", lastName: "Bruneau", age: 70, history: [{disease: "cold", treatment: 1}]}, {firstName: "The", lastName: "Dude", age: 20, history: [{disease: "hungry", treatment: 95}]},{firstName: "Tom", lastName: "Q", age: 32, history: [{disease: "sad", treatment: 55}]}])
+
+
+db.patients.find().pretty()
+
+
+db.patients.updateOne({firstName: "Tom"}, {$set: {lastName: "Johnson", age: 85, history: [{disease: "very sad", treatment: 61}]}})
+
+
+db.patients.find().pretty()
+
+db.patients.find({age: {$gt: 30}}).pretty()
+
+db.patients.deleteMany({"history.disease": "cold"})
+
+
+

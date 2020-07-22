@@ -1,0 +1,14 @@
+
+
+mongoimport boxoffice-extended.json -d boxOffice -c exmoviestarts --drop --jsonArray
+
+db.exmoviestarts.find().pretty()
+
+db.exmoviestarts.find({genre: {$size: 2}}).pretty()
+
+db.exmoviestarts.find({"meta.aired": 2018}).pretty()
+
+db.exmoviestarts.find({ratings: {$elemMatch: {$gt: 8, $lt: 10}}}).pretty()
+
+
+

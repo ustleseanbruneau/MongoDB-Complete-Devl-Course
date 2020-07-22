@@ -1,0 +1,20 @@
+
+mongoimport boxoffice.json -d boxOffice -c moviestarts --drop --jsonArray
+
+use boxOffice
+
+db.moviestarts.find().pretty()
+
+
+db.moviestarts.find({"meta.rating": {$gt: 9.2}, "meta.runtime": {$lt: 100}}).pretty()
+
+db.moviestarts.find({$or: [{genre: "drama"}, {genre: "action"}]}).pretty()
+
+
+db.moviestarts.find({$and: [{genre: "drama"}, {genre: "action"}]}).pretty()
+
+
+db.moviestarts.find({$expr: {$gt: ["$visitors", "$expectedVisitors"]}}).pretty()
+
+
+

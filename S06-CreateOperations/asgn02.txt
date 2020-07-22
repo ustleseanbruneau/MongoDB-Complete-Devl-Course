@@ -1,0 +1,23 @@
+
+use companyData
+
+db.companies.insertOne({name: "Fresh Food Inc", stock: 100, _id: 1})
+
+db.companies.insertMany([{name: "Smart Teddy Bear Inc", stock: 200, _id: 2}, {name: "Heavy Beef Inc", stock: 50, _id: 3}])
+
+db.companies.find().pretty()
+
+
+# error - id 1 already exists, so won't insert either record
+db.companies.insertMany([{name: "Fresh Beverages Inc", stock: 88, _id: 1}, {name: "Cool Burgers Inc", stock: 12, _id: 4}])
+
+# No error - will skip id 1 and only insert id 4
+db.companies.insertMany([{name: "Fresh Beverages Inc", stock: 88, _id: 1}, {name: "Cool Burgers Inc", stock: 12, _id: 4}], {ordered: false})
+
+# insert immediate without waiting for journal entry
+db.companies.insertOne({name: "Touchy Tables Inc", stock: 212, _id: 5}, {writeConcern: {w: 1, j: false}})
+
+# Wait to write to journal
+db.companies.insertOne({name: "Touchy Tables Inc", stock: 212, _id: 6}, {writeConcern: {w: 1, j: true}})
+
+

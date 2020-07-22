@@ -7,4 +7,34 @@ https://docs.mongodb.com/manual/tutorial/getting-started/
 https://docs.mongodb.com/manual/reference/bson-types
 
 
+https://docs.mongodb.com/manual/reference/limits/
+
+https://docs.mongodb.com/manual/core/schema-validation/
+
+https://docs.mongodb.com/manual/reference/configuration-options/
+
+https://docs.mongodb.com/manual/reference/program/mongo/
+
+https://docs.mongodb.com/manual/reference/program/mongod/
+
+
+# Section 6
+
+https://docs.mongodb.com/manual/reference/program/method/db.collection.insertOne/
+https://docs.mongodb.com/manual/reference/program/method/db.collection.insertMany/
+https://docs.mongodb.com/manual/core/write-operations-atomicity/#atomicity
+https://docs.mongodb.com/manual/reference/write-concern/
+https://docs.mongodb.com/manual/reference/program/mongoimport/index.html
+
+
+# Section 7
+
+https://docs.mongodb.com/manual/reference/method/db.collection.find/
+https://docs.mongodb.com/manual/tutorial/iterate-a-cursor/
+https://docs.mongodb.com/manual/reference/operator/query/
+
+
+
+
+
 
