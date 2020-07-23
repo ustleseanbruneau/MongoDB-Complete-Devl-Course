@@ -1,0 +1,18 @@
+
+# upsert record into new collection
+db.sports.updateMany({}, {$set: {title: "Football", requiresTeam: true}}, {upsert: true})
+
+
+# will overwrite previous insert
+db.sports.updateMany({}, {$set: {title: "Running", requiresTeam: false}}, {upsert: true})
+
+
+# upsert an second record
+db.sports.updateMany({title: "Soccer"}, {$set: {requiresTeam: true}}, {upsert: true})
+
+#  Add field minPlayers
+db.sports.updateMany({requiresTeam: true}, {$set: {minPlayers: 11}})
+
+# Increment minPlayers value
+db.sports.updateMany({requiresTeam: true}, {$inc: {minPlayers: 10}})
+
