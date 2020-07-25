@@ -1,0 +1,20 @@
+
+
+db.contacts.explain().find({"dob.age": {$gt: 60}})
+
+
+db.contacts.explain("executionStats").find({"dob.age": {$gt: 60}})
+
+
+# add index
+
+# ascending
+db.contacts.createIndex({"dob.age": 1})
+
+
+# decending
+db.contacts.createIndex({"dob.age": -1})
+
+
+# multi-key indexes
+

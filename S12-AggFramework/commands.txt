@@ -1,0 +1,12 @@
+
+mongoimport persons.json -d analytics -c persons --jsonArray
+
+use analytics
+
+show collections
+
+db.persons.findOne()
+
+db.persons.aggregate([{ $match: {gender: "female"} }])
+
+

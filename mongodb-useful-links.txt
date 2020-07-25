@@ -34,6 +34,43 @@ https://docs.mongodb.com/manual/tutorial/iterate-a-cursor/
 https://docs.mongodb.com/manual/reference/operator/query/
 
 
+# Section 8 - Update
+
+https://docs.mongodb.com/manual/tutorial/update-documents/
+
+# Section 9 - Delete
+
+https://docs.mongodb.com/manual/tutorial/remove-documents/
+
+# Section 10 - Indexes
+
+partialFilterExpressions:
+https://docs.mongodb.com/manual/core/index-partial/
+
+default_languages:
+https://docs.mongodb.com/manual/reference/text-search-languages/#text-search-languages
+
+
+
+# Section 11 - Geospatial
+
+Geospatial Docs:
+https://docs.mongodb.com/manual/geospatial-queries/
+
+Geospatial Query Operators:
+https://docs.mongodb.com/manual/reference/operator/query-geospatial/
+
+
+# Section 12 - Aggregation Framework
+https://docs.mongodb.com/manual/core/aggregation-pipeline
+
+$cond
+https://docs.mongodb.com/manual/core/aggregation-pipeline/cond
+
+# Section 13 - Numeric data
+https://docs.mongodb.com/manual/tutorial/model-monetary-data/
+
+
 
 
 
